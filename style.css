@@ -1,144 +1,133 @@
-*{
-    margin: 0;
-    padding: 0;;
-    box-sizing: border-box;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
-body{
-    background-image: linear-gradient(120deg, #e01111 , #000000);
-    color: white;
-    font-family: "poppins" , sans-serif;
+body {
+	background-image: linear-gradient(120deg, #45cece, #f00000);
+	color: #000;
+	font-family: "poppins", sans-serif;
+	min-height: 100vh;
 }
 
-header{
-    font: 1.5 rem;
+header {
+	font-size: 1.5rem;
+}
+header,
+form {
+	min-height: 20vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
-header,form{
-    min-height: 20vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+form input,
+form button {
+	padding: 0.5rem;
+	font-size: 2rem;
+	border: none;
+	background: #fff;
 }
 
-form input, form button {
-    padding: 0.4rem;
-    font-size: 2rem;
-    border: none;
-    background: white;
-    
+form button {
+	color: #000;
+	background: #fff;
+	cursor: pointer;
+	transition: all 0.3s ease;
 }
 
-form button{
-    color: #ff0000;
-    background: rgb(255, 255, 255);
-    cursor: pointer;
-    transform: all 0.3s ease;
+form button:hover {
+	background: #000;
+	color: #fff;
 }
-
-form button:hover{
-    background:#fe0000;
-    color: white;
+.todo-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
-
-.todo-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.todo-list{
-    min-width: 30%;
-    list-style: none;
+.todo-list {
+	min-width: 30%;
+	list-style: none;
 }
 
 .todo {
-    margin: 0.5rem;
-    background: white;
-    color: black;
-    font-size: 1.5 rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: all 0.5s ease;
-
+	margin: 0.5rem;
+	background: #fff;
+	font-size: 1.5rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	transition: all 0.5s ease;
 }
-
-.todo li{
-    flex: 1;
+.todo li {
+	flex: 1;
 }
-
 .trash-btn,
-.complete-btn {
-    background: #000000;
-    color: white;
-    border: none;
-    padding: 1rem;
-    cursor: pointer;
-    font-size: 1rem;
-    
+.completed-btn {
+	background: #f8af6b;
+	color: #000;
+	border: none;
+	padding: 1rem;
+	cursor: pointer;
+	font-size: 1rem;
 }
-
-.complete-btn{
-    background: rgb(2, 68, 2);
-
+.completed-btn {
+	background: #77ecbd;
 }
-
 .todo-item {
-    padding: 0rem 0.5rem;
+	padding: 0rem 0.5rem;
 }
 
 .fa-trash,
 .fa-check {
-    pointer-events: none;
+	pointer-events: none;
 }
 
-.completed{
-    text-decoration: line-through;
-    opacity: 0.5;
-
+.completed {
+	text-decoration: line-through;
+	opacity: 0.5;
 }
 
-.fall{
-    transform: translateY(8rem)  rotateZ(20deg);
-    opacity: 0 ;
-} 
-
-select{
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    outline: none;
-    border: none;
+.fall {
+	transform: translateY(8rem) rotate(20deg);
+	opacity: 0;
 }
 
-.select{
-    margin: 1rem;
-    position: relative;
-    overflow: hidden;
+select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	outline: none;
+	border: none;
 }
 
-select{
-    color: #ff0000;
-    width: 10rem;
-    cursor :pointer;
-    padding: 1rem;
-
+.select {
+	margin: 1rem;
+	position: relative;
+	overflow: hidden;
 }
 
-.select::after{
-    content: "\25BC";
-    position: absolute;
-    background:#000000;
-    top: 0;
-    right: 0;
-    padding: 1rem;
-    pointer-events: none;
-    transition: all 0.3s ease;
+select {
+	color: #000;
+	width: 10rem;
+	cursor: pointer;
+	padding: 1rem;
 }
 
-.select:hover::after{
-    background-image: white;
-    color: #c20404;
+.select::after {
+	content: "\25BC";
+	position: absolute;
+	background: #fff;
+	top: 0;
+	right: 0;
+	padding: 1rem;
+	pointer-events: none;
+	padding: 1rem;
+	pointer-events: none;
+	transition: all 0.3s ease;
+}
 
+.select:hover::after {
+	background: #22d3ee;
 }
